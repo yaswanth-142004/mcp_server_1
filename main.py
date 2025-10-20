@@ -5,7 +5,8 @@ mcp = FastMCP("Personal Server")
 
 @mcp.tool
 def get_my_details(secret_code:str):
-    return {
+    
+    info = {
         "name":"yaswanth",
         "age":20,
         "work":"SDE-AI",
@@ -15,10 +16,13 @@ def get_my_details(secret_code:str):
         
     }
     
+    return info
     
     
-    if __name__ == "__main__":
-        mcp.run(transport="http",port=1234)
+    
+    
+if __name__ == "__main__":
+    mcp.run(transport="http",port=1234)
     
     
     
